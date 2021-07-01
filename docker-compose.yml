@@ -13,16 +13,16 @@ services:
             - .env
         command: sh -c "node asd.js"
         
-    db:
-        container_name: ie-back-db
-        image: mysql
-        restart: "no"
-        environment: 
-            MYSQL_ROOT_PASSWORD: root
-        volumes:
-            - ".docker/mysql:/var/lib/mysql"
-        ports:
-            - "3306:3306"
-        networks: 
-            - db
-        command: --default-authentication-plugin=mysql_native_password
+    # db:
+    #     container_name: ie-back-db
+    #     image: mysql
+    #     restart: "no"
+    #     environment: 
+    #         MYSQL_ROOT_PASSWORD: root
+    #     volumes:
+    #         - ".docker/mysql:/var/lib/mysql"
+    #     ports:
+    #         - "3306:3306"
+    #     networks: 
+    #         - db
+    #     command: --default-authentication-plugin=mysql_native_password
